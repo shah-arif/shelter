@@ -5,12 +5,22 @@ import 'package:shelter/const/app_string.dart';
 import 'package:shelter/ui/route/route.dart';
 import 'package:shelter/ui/styles/style.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
     Future.delayed(Duration(seconds: 3),()=>Get.toNamed(onboarding));
+  }
+  @override
+  Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Center(

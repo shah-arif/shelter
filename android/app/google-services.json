@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "720853645134",
+    "project_id": "shelter-bf7a8",
+    "storage_bucket": "shelter-bf7a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720853645134:android:4671eeb297e2cd5b55901f",
+        "android_client_info": {
+          "package_name": "com.example.shelter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720853645134-87gio5m0ifrkm4sv8c4j6d3ej91vsqod.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shelter",
+            "certificate_hash": "3cff32b78c3b3337e43581d442fcaace6bec67ba"
+          }
+        },
+        {
+          "client_id": "720853645134-ni0rsgle8sscrm4phht1vnturf9usoh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHECTfTr03XmJ_q7jo_XH4Lv6WilVwAGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720853645134-ni0rsgle8sscrm4phht1vnturf9usoh4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

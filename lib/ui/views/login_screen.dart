@@ -8,7 +8,7 @@ import 'package:shelter/ui/route/route.dart';
 import 'package:shelter/ui/styles/style.dart';
 import 'package:shelter/widgets/violet_button.dart';
 
-class SignUpScreen extends StatelessWidget {
+class LoginScreen extends StatelessWidget {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
 
@@ -23,7 +23,7 @@ class SignUpScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Create\nyour account",
+                  "Login\nTo Your Account",
                   style: TextStyle(
                       fontSize: 36.sp,
                       fontWeight: FontWeight.w500,
@@ -49,7 +49,7 @@ class SignUpScreen extends StatelessWidget {
                   decoration: AppStyles().textFieldDecoration("Enter Password"),
                 ),
                 SizedBox(height: 40.h,),
-                VioletButton(title: "Create Account",onAction: ()=>Get.toNamed(user_form)),
+                VioletButton(title: "Log In",onAction: (){}),
                 SizedBox(height: 10.h,),
                 Align(
                   alignment: Alignment.center,
@@ -69,7 +69,7 @@ class SignUpScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: RichText(text: TextSpan(
-                    text: 'Already an user?',
+                    text: 'Don\'t have registered yet?',
                     style: TextStyle(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w300,
@@ -77,13 +77,13 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     children: [
                       TextSpan(
-                        text: ' Log In',
+                        text: ' Sign Up',
                         style: TextStyle(
                             fontSize: 16.sp,
                             fontWeight: FontWeight.w600,
                           color: AppColors.violet_color
                         ),
-                        recognizer: TapGestureRecognizer()..onTap = ()=>Get.toNamed(log_in)
+                        recognizer: TapGestureRecognizer()..onTap = ()=>Get.toNamed(sign_up)
                       )
                     ]
                   )),

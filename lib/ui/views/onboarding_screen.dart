@@ -77,7 +77,7 @@ class OnBoardingScreen extends StatelessWidget {
                         }),
                         InkWell(
                           onTap: () {
-                            if(_currentIndex == 2){
+                            if(_currentIndex == _title.length-1){
                               Get.toNamed(sign_up);
                               print("finished");
                             }else{
