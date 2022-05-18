@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:shelter/bloc/auth.dart';
 import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/ui/route/route.dart';
 import 'package:shelter/ui/styles/style.dart';
@@ -49,7 +50,7 @@ class SignUpScreen extends StatelessWidget {
                   decoration: AppStyles().textFieldDecoration("Enter Password"),
                 ),
                 SizedBox(height: 40.h,),
-                VioletButton(title: "Create Account",onAction: ()=>Get.toNamed(user_form)),
+                VioletButton(title: "Create Account",onAction: ()=>Auth().registration(_emailController.text, _passwordController.text, context)),
                 SizedBox(height: 10.h,),
                 Align(
                   alignment: Alignment.center,
@@ -88,8 +89,6 @@ class SignUpScreen extends StatelessWidget {
                     ]
                   )),
                 )
-
-
               ],
             ),
           ),

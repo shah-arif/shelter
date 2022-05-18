@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:lottie/lottie.dart';
 import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/ui/route/route.dart';
@@ -20,6 +21,7 @@ class OnBoardingScreen extends StatelessWidget {
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   ];
+  final box = GetStorage();
 
   RxInt _currentIndex = 0.obs;
 
@@ -78,7 +80,9 @@ class OnBoardingScreen extends StatelessWidget {
                         InkWell(
                           onTap: () {
                             if(_currentIndex == _title.length-1){
-                              Get.toNamed(sign_up);
+                              Get.offNamed(sign_up);
+                              box.write("checkOnBoarding", "Onboarding Checked");
+
                               print("finished");
                             }else{
                               _currentIndex +1;
@@ -87,7 +91,7 @@ class OnBoardingScreen extends StatelessWidget {
                           child: Container(
                             height: 37.h,
                             width: 37.w,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 color: AppColors.scaffold_color,
                                 shape: BoxShape.circle,
                                 boxShadow: [
@@ -105,7 +109,7 @@ class OnBoardingScreen extends StatelessWidget {
                                   )
                                 ]
                             ),
-                            child: Icon(Icons.double_arrow_rounded)
+                            child: const Icon(Icons.double_arrow_rounded)
                           ),
                         )
                       ],

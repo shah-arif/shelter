@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:shelter/bloc/auth.dart';
 import 'package:shelter/const/app_colors.dart';
 import 'package:shelter/ui/route/route.dart';
 import 'package:shelter/ui/styles/style.dart';
@@ -49,7 +50,7 @@ class LoginScreen extends StatelessWidget {
                   decoration: AppStyles().textFieldDecoration("Enter Password"),
                 ),
                 SizedBox(height: 40.h,),
-                VioletButton(title: "Log In",onAction: (){}),
+                VioletButton(title: "Log In",onAction: ()=>Auth().login(_emailController.text, _passwordController.text, context)),
                 SizedBox(height: 10.h,),
                 Align(
                   alignment: Alignment.center,
