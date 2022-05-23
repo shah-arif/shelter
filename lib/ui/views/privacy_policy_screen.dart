@@ -26,7 +26,7 @@ class PrivacyPolicy extends StatelessWidget {
               Obx(() {
                 return _loaded == true ?VioletButton(title: "Agree", onAction: (){
                   box.write("permission", "Privacy & Policy Accepted");
-                  Get.toNamed(bottom_nav_bar);
+                  Get.toNamed(main_home_screen);
                 }) : CircularProgressIndicator();
               }),
               SizedBox(height: 25.h,)

@@ -18,6 +18,7 @@ class Auth {
         Fluttertoast.showToast(msg: 'Registration Successfull');
         box.write('uid', authCredential.uid);
         Get.toNamed(user_form);
+        box.write('cpiLoad', "stop");
       } else {
         print("sign up failed");
       }
@@ -42,7 +43,7 @@ class Auth {
       print(authCredential);
       if (authCredential!.uid.isNotEmpty) {
         Fluttertoast.showToast(msg: 'Login Successfull');
-        Get.toNamed(bottom_nav_bar);
+        Get.toNamed(main_home_screen);
       } else {
         print("sign up failed");
       }

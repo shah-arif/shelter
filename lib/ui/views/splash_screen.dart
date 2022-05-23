@@ -15,41 +15,38 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   final box = GetStorage();
-  Future chooseScreen()async{
+  Future chooseScreen() async {
     var userId = box.read('uid');
     var permission = box.read("permission");
     var userfomSubmitted = box.read("userfomSubmitted");
     var checkOnBoarding = box.read("checkOnBoarding");
 
-    if(userId == null){
-      if(checkOnBoarding == null){
-        Get.toNamed(onboarding);
+    if (userId == null) {
+      if (checkOnBoarding == null) {
+        Get.offAndToNamed(onboarding);
       } else {
-        Get.toNamed(sign_up);
+        Get.offAndToNamed(sign_up);
       }
-    }
-    else {
-      Get.offNamed(user_form);
-      if(userfomSubmitted == null){
-      }
-      else {
-        Get.toNamed(privacy_policy);
-        if(permission == null){
-
-        }else {
-          Get.toNamed(bottom_nav_bar);
+    } else {
+      Get.offAndToNamed(user_form);
+      if (userfomSubmitted == null) {
+      } else {
+        Get.offAndToNamed(privacy_policy);
+        if (permission == null) {
+        } else {
+          Get.offAndToNamed(main_home_screen);
         }
       }
     }
   }
 
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(seconds: 3),()=>chooseScreen());
+    Future.delayed(Duration(seconds: 3), () => chooseScreen());
   }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -61,8 +58,13 @@ class _SplashScreenState extends State<SplashScreen> {
               FlutterLogo(
                 size: 100.w,
               ),
-              SizedBox(height: 10.h,),
-              Text(AppString.app_title,style: AppStyles().myTextStyle,)
+              SizedBox(
+                height: 10.h,
+              ),
+              Text(
+                AppString.app_title,
+                style: AppStyles().myTextStyle,
+              )
             ],
           ),
         ),

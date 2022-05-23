@@ -88,7 +88,7 @@ class UserForm extends StatelessWidget {
                 VioletButton(title: "Submit", onAction: (){
                   UsersInfo().sendFormDataToDB(_nameController.text, int.parse(_phoneController.text), _addressController.text, _dobController.text, gender);
                   box.write("userfomSubmitted", "User form data collected");
-                })
+                }),
               ],
             ),
           ),

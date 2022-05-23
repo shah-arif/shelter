@@ -13,9 +13,11 @@ class VioletButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(() {
       return InkWell(
-        onTap: () {
+        onTap: () async{
           _value.value = true;
+          await Future.delayed(Duration(seconds: 1));
           onAction();
+          _value.value = false;
         },
         child: Container(
             height: 42.h,

@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: AppColors.scaffold_color),
           initialRoute: splah,
           getPages: getPages,
-          home: const SplashScreen(),
+          // home: const SplashScreen(),
         );
       },
     );
